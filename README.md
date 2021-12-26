@@ -47,13 +47,13 @@ sudo apt-get install \
     lsb-release
 ```
 
-1. Add Docker official GPG Keys
+2. Add Docker official GPG Keys
 
 ```
  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 ```
 
-1. Setup stable repository
+3. Setup stable repository
 
 ```
 echo \
@@ -61,7 +61,7 @@ echo \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 
-1. Install Docker Engine
+4. Install Docker Engine
 
 ```
 sudo apt-get update
@@ -69,7 +69,7 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
 
-1. Verify that Docker Engine is installed correctly
+5. Verify that Docker Engine is installed correctly
 
 ```
 docker --version
