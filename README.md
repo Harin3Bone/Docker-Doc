@@ -29,13 +29,13 @@ Docker can installed in Windows, MacOS and Linux
 1. Download from this [link](https://docs.docker.com/desktop/mac/install/)
 2. Run `Docker.dmg`
 3. Drag the Docker icon to the Application folder
-4. Run `Docker.app` in the Applications folder&#x20;
+4. Run `Docker.app` in the Applications folder
 {% endtab %}
 
 {% tab title="Linux" %}
-ddssDebian/Ubuntu
+**Debian/Ubuntu**
 
-1. Update the `apt` package and allow `apt` to use HTTPS
+1\. Update the `apt` package and allow `apt` to use HTTPS
 
 ```
 sudo apt-get update
@@ -47,13 +47,13 @@ sudo apt-get install \
     lsb-release
 ```
 
-2. Add Docker official GPG Keys
+2\. Add Docker official GPG Keys
 
 ```
  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 ```
 
-3. Setup stable repository
+3\. Setup stable repository
 
 ```
 echo \
@@ -61,7 +61,7 @@ echo \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 
-4. Install Docker Engine
+4\. Install Docker Engine
 
 ```
 sudo apt-get update
@@ -69,11 +69,10 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
 
-5. Verify that Docker Engine is installed correctly
+5\. Verify that Docker Engine is installed correctly
 
 ```
 docker --version
 ```
 {% endtab %}
 {% endtabs %}
-
