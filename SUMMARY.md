@@ -2,4 +2,5 @@
 
 * [Docker](README.md)
 * [Docker Compose](docker-compose.md)
-* [CLI](cli.md)
+* [CLI](cli/README.md)
+  * [run](cli/run.md)
