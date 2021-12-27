@@ -4,6 +4,8 @@ description: Introduce about Docker Compose
 
 # Docker Compose
 
+![](.gitbook/assets/Docker-Compose.jpeg)
+
 ### What is Compose ?&#x20;
 
 Compose is a tool for defining and running multi-container Docker applications. With Compose you can use a `YAML` file to configure your application's services with a single command&#x20;
