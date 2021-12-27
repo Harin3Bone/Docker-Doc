@@ -76,3 +76,47 @@ docker --version
 ```
 {% endtab %}
 {% endtabs %}
+
+### Post Installation (Linux)
+
+Commonly when docker install finished it can access as **root** user only. Because of that I recommended everyone do this for make docker can access by non-root user
+
+1\. Create the **docker** group
+
+```
+sudo groupadd docker
+```
+
+2\. Add your user to the **docker** group
+
+```
+sudo usermod -aG docker $USER
+```
+
+3\. Logout and Login so that your group membership is re-evaluated
+
+```
+newgrp docker
+```
+
+4\. Verify that you can run **docker** command without `sudo`
+
+```
+docker run hello-world
+```
+
+### Configure Docker to start on boot (Linux)
+
+Most current Linux are use `systemd` to manage which services start when the system boots. On **Debian** and **Ubuntu** the docker service are configured to start on boot by default. To automatically start Docker and Container on boot for other distro use command below.
+
+```
+sudo systemctl enable docker.service
+sudo systemctl enable containerd.service
+```
+
+To disable this behavior, use `disable` instead.
+
+```
+sudo systemctl disable docker.service
+sudo systemctl disable containerd.service
+```
