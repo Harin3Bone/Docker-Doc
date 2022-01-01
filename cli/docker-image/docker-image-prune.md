@@ -6,6 +6,10 @@ description: Remove unuse image
 
 ### Synopsis
 
+```
+docker image prune
+```
+
 ### Options
 
 * \-a
